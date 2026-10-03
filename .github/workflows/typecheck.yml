@@ -1,0 +1,23 @@
+name: Typecheck
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      # --legacy-peer-deps matches local dev: Expo's web-support packages
+      # (react-dom as an optional peer of @expo/metro-runtime etc.) lag a
+      # minor version behind the pinned react version on every fresh SDK
+      # release, so strict peer resolution fails even though nothing is
+      # actually broken for this iOS/Android-only app.
+      - run: npm ci --legacy-peer-deps
+      - run: npm run typecheck

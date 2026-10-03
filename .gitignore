@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native (only present if prebuild/eject has been run locally)
+ios/
+android/
+
+# Environment variables — never commit real secrets/config
+.env
+.env.*.local
+
+# Editor / local tooling
+.claude/
+.vscode/
+.idea/
+*.orig.*
+
+# Signing / credentials
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Logs
+*.log
+npm-debug.*
+
+# OS
+.DS_Store
+
+# TypeScript
+*.tsbuildinfo

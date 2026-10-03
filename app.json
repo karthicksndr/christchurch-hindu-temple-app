@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Christchurch Hindu Temple",
+    "slug": "christchurch-hindu-temple",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "templeapp",
+    "userInterfaceStyle": "light",
+    "platforms": ["ios", "android"],
+    "icon": "./assets/icon.png",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "nz.org.hindutemple.app"
+    },
+    "android": {
+      "package": "nz.org.hindutemple.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2E2119"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#2E2119"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/android-icon-monochrome.png",
+          "color": "#7C2430"
+        }
+      ],
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "953a60a1-bc1d-4d78-88c9-ca5b18f03dfb"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/953a60a1-bc1d-4d78-88c9-ca5b18f03dfb"
+    }
+  }
+}
